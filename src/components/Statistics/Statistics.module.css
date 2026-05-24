@@ -1,0 +1,73 @@
+/* Базовий контейнер статистики */
+.statistics {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* Заголовок секції */
+.statistics .title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #4b5563;
+  text-align: center;
+  margin: 0;
+  padding: 25px 0;
+  font-weight: 600;
+  background-color: #ffffff;
+}
+
+/* 
+  Сітка для елементів.
+  Завдяки auto-fit та minmax(100px, 1fr) елементи ставатимуть в один ряд, 
+  але якщо їх буде забагато (5, 6 або більше), вони автоматично перенесуться 
+  на наступний рядок, зберігаючи однакову ширину.
+*/
+.stat-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f9fafb; /* Такий же бекграунд, як у stats профілю */
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Окремий елемент статистики */
+.stat-list .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* 
+  Гармонійне розділення лініями, як у профілі.
+  Замість кольорових блоків тепер світлий стиль з рамками між елементами.
+*/
+.stat-list .item:not(:last-child) {
+  border-right: 1px solid #e5e7eb;
+}
+
+/* Текст типу файлу (.docx, .mp3 тощо) */
+.stat-list .label {
+  font-size: 12px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+/* Відсотки */
+.stat-list .percentage {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827; /* Темний колір, як у кількості підписників профілю */
+}

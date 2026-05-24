@@ -1,0 +1,44 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Відступ між елементами всередині рядка */
+  padding: 12px 20px;
+  background-color: #ffffff;
+  border-radius: 8px; /* Заокруглення як у профілю та статистики */
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Гармонійна тінь */
+  transition: transform 0.2s ease;
+}
+
+/* Індикатор статусу (онлайн/офлайн) */
+.status {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0; /* Щоб кружечок не стискався, якщо ім'я довге */
+}
+
+/* Динамічні кольори для статусу (базуються на коді з попередньої відповіді) */
+.status.online {
+  background-color: #22c55e; /* Зелений */
+}
+
+.status.offline {
+  background-color: #ef4444; /* Червоний */
+}
+
+/* Аватарка друга */
+.avatar {
+  border-radius: 8px; /* Легке заокруглення для фото */
+  background-color: #f3f4f6;
+  object-fit: cover;
+}
+
+/* Ім'я */
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827; /* Темний колір з вашої палітри */
+  margin: 0;
+}

@@ -1,0 +1,10 @@
+.friend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Відступ між картками друзів */
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 400px; /* Ширина в гармонії з попередніми блоками */
+  font-family: sans-serif;
+}
