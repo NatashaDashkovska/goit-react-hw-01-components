@@ -1,0 +1,57 @@
+/* Контейнер-обгортка для таблиці (ОБОВ'ЯЗКОВО для горизонтального скролу на мобільних) */
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: 8px; /* В гармонії з попередніми компонентами */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin: 20px auto;
+}
+
+/* Базові стилі таблиці */
+.transaction-history {
+  width: 100%;
+  border-collapse: collapse; /* Прибирає подвійні рамки між комірками */
+  background-color: #ffffff;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+/* Стилізація шапки таблиці */
+.transaction-history thead th {
+  background-color: #06b6d4; /* Яскравий акцент (наприклад, ціан), що пасує до палітри статистики */
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  padding: 14px 20px;
+  
+  /* Якщо таблиця стане дуже довгою, шапка залишиться зверху при скролі */
+  position: sticky;
+  top: 0;
+}
+
+/* Стилізація комірок тіла таблиці */
+.transaction-history tbody td {
+  padding: 12px 20px;
+  font-size: 14px;
+  color: #4b5563; /* Текст середньої контрастності */
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Перша колонка (Type) — робимо текст трохи виразнішим */
+.transaction-history tbody td:first-child {
+  font-weight: 500;
+  color: #111827;
+}
+
+/* «Зеброве» забарвлення рядків для легкого зчитування при великій кількості даних */
+.transaction-history tbody tr:nth-child(even) {
+  background-color: #f9fafb; /* Світло-сірий тон, як у попередніх картках */
+}
+
+/* Ефект наведення на рядок */
+.transaction-history tbody tr:hover {
+  background-color: #f3f4f6;
+  transition: background-color 0.15s ease;
+}
